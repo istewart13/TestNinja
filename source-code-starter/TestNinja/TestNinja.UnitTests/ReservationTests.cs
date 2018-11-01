@@ -1,12 +1,12 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using TestNinja.Fundamentals;
 
 namespace TestNinja.UnitTests
 {
-    [TestClass]
+    [TestFixture]
     public class ReservationTests
     {
-        [TestMethod]
+        [Test]
         public void CanBeCancelledBy_UserIsAdmin_ReturnsTrue()
         {
             // Arrange
@@ -19,7 +19,7 @@ namespace TestNinja.UnitTests
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
+        [Test]
         public void CanBeCancelledBy_MadeByUser_ReturnsTrue()
         {
             // Arrange
@@ -34,7 +34,7 @@ namespace TestNinja.UnitTests
 
         }
 
-        [TestMethod]
+        [Test]
         public void CanBeCancelledBy_UserIsNotAdminAndReservationNotMadeByUser_ReturnsFalse()
         {
             // Arrange
